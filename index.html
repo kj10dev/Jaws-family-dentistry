@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaws Family Dentistry</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <link rel="stylesheet" href="style.css">        
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/Word_Logo.jpeg" alt="Jaws Family Dentistry Logo">
+                <div class="logo-text">Jaws<br>Family Dentistry</div>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li class="nav-item"><a href="patient-info.html" class="nav-link" data-page="patient-info">Patient Info</a></li>
+                    <li class="nav-item"><a href="appointment.html" class="nav-link" data-page="appointment">Book Appointment</a></li>
+                    <li class="nav-item"><a href="./AI_temp/contact.html" class="nav-link" data-page="contact">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home Page -->
+        <section id="home-page" class="page">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Welcome to Jaws Family Dentistry</h1>
+                    <p>Your trusted partner for comprehensive dental care for the whole family. We provide gentle, expert care in a comfortable, modern environment.</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" id="book-appointment-btn">Book Appointment</a>
+                        <a href="#" class="btn btn-secondary" id="contact-us-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="section-title scroll-reveal">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card scroll-reveal">
+                        <img src="https://placehold.co/400x200/2980b9/ffffff?text=Preventive+Care" alt="Preventive Care">
+                        <div class="service-content">
+                            <h3>Preventive Care</h3>
+                            <p>Regular check-ups, cleanings, and fluoride treatments to maintain optimal oral health and prevent dental problems before they start.</p>
+                        </div>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <img src="https://placehold.co/400x200/3498db/ffffff?text=Cosmetic+Dentistry" alt="Cosmetic Dentistry">
+                        <div class="service-content">
+                            <h3>Cosmetic Dentistry</h3>
+                            <p>Transform your smile with teeth whitening, veneers, bonding, and other cosmetic procedures designed to enhance your natural beauty.</p>
+                        </div>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <img src="https://placehold.co/400x200/27ae60/ffffff?text=Restorative+Care" alt="Restorative Care">
+                        <div class="service-content">
+                            <h3>Restorative Care</h3>
+                            <p>Comprehensive solutions including fillings, crowns, bridges, and dentures to restore function and appearance to damaged or missing teeth.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-title scroll-reveal">Why Choose Us?</h2>
+                <div class="about-content scroll-reveal">
+                    <div class="about-text">
+                        <h3>Exceptional Dental Care for Every Age</h3>
+                        <p>At JAWS Family Dentistry, we believe that everyone deserves a healthy, beautiful smile. Our experienced team provides compassionate care for patients of all ages, from children to seniors.</p>
+                        <p>We use the latest technology and techniques to ensure you receive the highest quality dental care in a comfortable, stress-free environment. Our office is designed with your comfort in mind, featuring modern amenities and a welcoming atmosphere.</p>
+                        <p>What sets us apart is our commitment to patient education and personalized treatment plans. We take the time to explain your options and help you make informed decisions about your dental health.</p>
+                    </div>
+                    <div class="about-text">
+                        <h3>Our Commitment to Excellence</h3>
+                        <ul style="padding-left: 20px; margin: 15px 0;">
+                            <li>State-of-the-art equipment and sterilization protocols</li>
+                            <li>Continuing education for our entire team</li>
+                            <li>Flexible scheduling and emergency services</li>
+                            <li>Insurance assistance and affordable payment options</li>
+                            <li>Complimentary consultations for new patients</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JAWS Family Dentistry</h3>
+                    <p>Your trusted partner for comprehensive dental care for the whole family. We provide gentle, expert care in a comfortable, modern environment.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">i</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-page="home">Home</a></li>
+                        <li><a href="about.html" data-page="about">About Us</a></li>
+                        <li><a href="services.html" data-page="services">Services</a></li>
+                        <li><a href="patient-info.html" data-page="patient-info">Patient Info</a></li>
+                        <li><a href="appointment.html" data-page="appointment">Book Appointment</a></li>
+                        <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Preventive Care</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Restorative Care</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Pediatric Dentistry</a></li>
+                        <li><a href="#">Oral Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:(555)123-4567">(555) 123-4567</a></li>
+                        <li><a href="mailto:info@jawsdentistry.com">info@jawsdentistry.com</a></li>
+                        <li><a href="#">123 Dental Drive, Suite 100<br>Coastal City, CA 90210</a></li>
+                        <li><a href="#">View Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 JAWS Family Dentistry. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    </body>
+</html>
+

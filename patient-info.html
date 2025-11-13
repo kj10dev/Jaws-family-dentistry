@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Patient - Jaws Family Dentistry</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+      <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/Word_Logo.jpeg" alt="JAWS Family Dentistry Logo">
+                <div class="logo-text">Jaws<br>Family Dentistry</div>
+            </div>
+            <nav>
+            <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li class="nav-item"><a href="patient-info.html" class="nav-link active" data-page="patient-info">Patient Info</a></li>
+                    <li class="nav-item"><a href="appointment.html" class="nav-link" data-page="appointment">Book Appointment</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-page="contact">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Patient Information Page -->
+        <section id="patient-info-page" class="page">
+            <div class="container">
+                <h2 class="section-title">Patient Information</h2>
+                <p style="text-align: center; margin-bottom: 40px;">We want to make your visit as convenient and comfortable as possible. Below you'll find everything you need to know about preparing for your appointment, completing forms, and understanding our policies.</p>
+
+                <div class="patient-info-content">
+                    <div class="forms-section">
+                        <h3>New Patient Forms</h3>
+                        <p>Please complete these forms before your first visit to save time and ensure we have all the information we need to provide you with the best possible care.</p>
+                        
+                        <ul class="form-list">
+                            <li>
+                                <span>Medical History Form</span>
+                                <a href="#" class="download-btn">Download PDF</a>
+                            </li>
+                            <li>
+                                <span>Dental History Form</span>
+                                <a href="#" class="download-btn">Download PDF</a>
+                            </li>
+                            <li>
+                                <span>Consent Form</span>
+                                <a href="#" class="download-btn">Download PDF</a>
+                            </li>
+                            <li>
+                                <span>Privacy Policy Acknowledgment</span>
+                                <a href="#" class="download-btn">Download PDF</a>
+                            </li>
+                        </ul>
+
+                        <h3>Online Form Completion</h3>
+                        <p>You can also complete our new patient forms online using our secure portal:</p>
+                        <a href="#" class="btn btn-primary" style="margin-top: 15px;">Complete Forms Online</a>
+                    </div>
+
+                    <div class="faq-section">
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="faq-item">
+                            <div class="faq-question faq-toggle">How often should I visit the dentist?</div>
+                            <div class="faq-answer">
+                                <p>Most patients should visit the dentist every 6 months for routine check-ups and cleanings. However, some patients may need to visit more frequently based on their individual oral health needs. Your dentist will recommend a schedule that's right for you.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question faq-toggle">What should I bring to my first appointment?</div>
+                            <div class="faq-answer">
+                                <p>For your first appointment, please bring:</p>
+                                <ul style="padding-left: 20px; margin: 10px 0;">
+                                    <li>Photo ID and insurance card (if applicable)</li>
+                                    <li>Completed new patient forms (or plan to complete them online)</li>
+                                    <li>A list of current medications and dosages</li>
+                                    <li>Any relevant medical history or dental records from previous providers</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question faq-toggle">What if I'm nervous about visiting the dentist?</div>
+                            <div class="faq-answer">
+                                <p>Many patients feel anxious about dental visits, and we understand. Our team is specially trained to help anxious patients feel comfortable. We offer:</p>
+                                <ul style="padding-left: 20px; margin: 10px 0;">
+                                    <li>Comfortable, relaxing environment</li>
+                                    <li>Thorough explanations of all procedures</li>
+                                    <li>Breaks during longer appointments</li>
+                                    <li>Sedation options for extremely anxious patients</li>
+                                </ul>
+                                <p>Please let us know about your concerns so we can make your visit as comfortable as possible.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question faq-toggle">How long does a typical appointment take?</div>
+                            <div class="faq-answer">
+                                <p>Appointment times vary depending on the type of treatment:</p>
+                                <ul style="padding-left: 20px; margin: 10px 0;">
+                                    <li>Initial consultation: 60-90 minutes</li>
+                                    <li>Routine cleaning and exam: 45-60 minutes</li>
+                                    <li>Fillings: 30-60 minutes per tooth</li>
+                                    <li>Crowns and other restorations: 60-90 minutes</li>
+                                </ul>
+                                <p>We'll provide you with an estimated time when you schedule your appointment.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question faq-toggle">What if I need to cancel or reschedule?</div>
+                            <div class="faq-answer">
+                                <p>We require 24 hours notice to cancel or reschedule appointments. This allows us to accommodate other patients who may need to see us. If you need to cancel or reschedule, please call us at (555) 123-4567 or use our online portal.</p>
+                                <p>Failure to provide 24 hours notice may result in a cancellation fee for certain appointments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insurance-info">
+                    <h3>Insurance & Billing Policies</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <h4>Insurance Processing</h4>
+                            <p>We process claims for most major dental insurance plans. As a courtesy to our patients, we will file your insurance claim for you. You will be responsible for any deductibles, co-pays, or portions not covered by your insurance.</p>
+                            <p>Please note that insurance coverage varies by plan, and we cannot guarantee what your insurance will cover. We will provide you with an estimate of your financial responsibility before beginning any treatment.</p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h4>Billing & Payment Policies</h4>
+                            <p>Payment is due at the time of service for all non-insurance charges. We accept:</p>
+                            <ul style="padding-left: 20px; margin: 15px 0;">
+                                <li>Major credit cards</li>
+                                <li>Debit cards</li>
+                                <li>Checks</li>
+                                <li>Flexible Spending Accounts (FSA) and Health Savings Accounts (HSA)</li>
+                            </ul>
+                            <p>We offer financing options through CareCredit® for larger treatments. Ask us about interest-free payment plans.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jaws Family Dentistry</h3>
+                    <p>Your trusted partner for comprehensive dental care for the whole family. We provide gentle, expert care in a comfortable, modern environment.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">i</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-page="home">Home</a></li>
+                        <li><a href="about.html" data-page="about">About Us</a></li>
+                        <li><a href="services.html" data-page="services">Services</a></li>
+                        <li><a href="patient-info.html" data-page="patient-info">Patient Info</a></li>
+                        <li><a href="appointment.html" data-page="appointment">Book Appointment</a></li>
+                        <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Preventive Care</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Restorative Care</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Pediatric Dentistry</a></li>
+                        <li><a href="#">Oral Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:(555)123-4567">(555) 123-4567</a></li>
+                        <li><a href="mailto:info@jawsdentistry.com">info@jawsdentistry.com</a></li>
+                        <li><a href="#">123 Dental Drive, Suite 100<br>Coastal City, CA 90210</a></li>
+                        <li><a href="#">View Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 JAWS Family Dentistry. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>

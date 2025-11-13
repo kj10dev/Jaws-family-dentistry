@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Jaws Family Dentistry</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+      <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="loader"></div>
+    </div>
+
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/Word_Logo.jpeg" alt="JAWS Family Dentistry Logo">
+                <div class="logo-text">Jaws<br>Family Dentistry</div>
+            </div>
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active" data-page="about">About Us</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link" data-page="services">Services</a></li>
+                    <li class="nav-item"><a href="patient-info.html" class="nav-link" data-page="patient-info">Patient Info</a></li>
+                    <li class="nav-item"><a href="appointment.html" class="nav-link" data-page="appointment">Book Appointment</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" data-page="contact">Contact Us</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- About Us Page -->
+        <section id="about-page" class="page">
+            <div class="container">
+                <h2 class="section-title">About Our Team</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Meet Our Dedicated Dental Professionals</h3>
+                        <p>At JAWS Family Dentistry, we're proud to have a team of highly skilled, compassionate professionals who are committed to providing exceptional dental care to our patients.</p>
+                        <p>Our doctors have years of experience and are dedicated to staying current with the latest advancements in dentistry through ongoing education and training. They approach each patient with empathy, patience, and a genuine desire to help them achieve optimal oral health.</p>
+                        <p>Our support staff is equally committed to your comfort and satisfaction. From the moment you walk through our doors, you'll be greeted with warmth and professionalism by our friendly receptionists, hygienists, and assistants.</p>
+                    </div>
+                    <div class="about-text">
+                        <h3>Our Mission & Values</h3>
+                        <p><strong>Mission:</strong> To provide comprehensive, compassionate dental care that enhances the health, confidence, and well-being of our patients and community.</p>
+                        <p><strong>Values:</strong></p>
+                        <ul style="padding-left: 20px; margin: 15px 0;">
+                            <li><strong>Compassion:</strong> We treat every patient with kindness, respect, and understanding.</li>
+                            <li><strong>Excellence:</strong> We strive for the highest standards in clinical care and patient service.</li>
+                            <li><strong>Integrity:</strong> We are honest, ethical, and transparent in all our interactions.</li>
+                            <li><strong>Innovation:</strong> We embrace new technologies and techniques to improve patient outcomes.</li>
+                            <li><strong>Community:</strong> We are committed to giving back and improving the health of our local community.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2 class="section-title">Our Dental Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://placehold.co/400x300/2980b9/ffffff?text=Dr.+Sarah+Johnson" alt="Dr. Sarah Johnson">
+                        <div class="team-member-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>General Dentist & Practice Owner</p>
+                            <p>Dr. Johnson has over 15 years of experience in family dentistry. She graduated from the University of California, San Francisco School of Dentistry and is passionate about preventive care and patient education.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/400x300/3498db/ffffff?text=Dr.+Michael+Chen" alt="Dr. Michael Chen">
+                        <div class="team-member-info">
+                            <h4>Dr. Michael Chen</h4>
+                            <p>Orthodontist & Cosmetic Specialist</p>
+                            <p>Dr. Chen specializes in orthodontics and cosmetic dentistry. He completed his residency at New York University College of Dentistry and is known for his gentle approach and artistic eye for smile design.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/400x300/27ae60/ffffff?text=Dr.+Emily+Rodriguez" alt="Dr. Emily Rodriguez">
+                        <div class="team-member-info">
+                            <h4>Dr. Emily Rodriguez</h4>
+                            <p>Pediatric Dentist</p>
+                            <p>Dr. Rodriguez specializes in treating children and adolescents. She creates a fun, welcoming environment that helps kids feel comfortable and excited about dental visits.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://placehold.co/400x300/e74c3c/ffffff?text=Dr.+David+Wilson" alt="Dr. David Wilson">
+                        <div class="team-member-info">
+                            <h4>Dr. David Wilson</h4>
+                            <p>Oral Surgeon & Implant Specialist</p>
+                            <p>Dr. Wilson has extensive experience in oral surgery and dental implants. He's known for his precision, calm demeanor, and ability to make complex procedures seem simple.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="office-info">
+                    <h3>Office Location & Hours</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px;">
+                        <div style="flex: 1; min-width: 300px;">
+                            <h4>Our Address</h4>
+                            <p>123 Dental Drive<br>Suite 100<br>Coastal City, CA 90210</p>
+                            <p><strong>Phone:</strong> (555) 123-4567</p>
+                            <p><strong>Email:</strong> info@jawsdentistry.com</p>
+                        </div>
+                        <div style="flex: 1; min-width: 300px;">
+                            <h4>Office Hours</h4>
+                            <ul class="hours-list">
+                                <li><span>Monday</span><span>8:00 AM - 6:00 PM</span></li>
+                                <li><span>Tuesday</span><span>8:00 AM - 6:00 PM</span></li>
+                                <li><span>Wednesday</span><span>8:00 AM - 6:00 PM</span></li>
+                                <li><span>Thursday</span><span>8:00 AM - 6:00 PM</span></li>
+                                <li><span>Friday</span><span>8:00 AM - 5:00 PM</span></li>
+                                <li><span>Saturday</span><span>9:00 AM - 3:00 PM</span></li>
+                                <li><span>Sunday</span><span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+            <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JAWS Family Dentistry</h3>
+                    <p>Your trusted partner for comprehensive dental care for the whole family. We provide gentle, expert care in a comfortable, modern environment.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="#" class="social-icon" aria-label="Instagram">i</a>
+                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-page="home">Home</a></li>
+                        <li><a href="about.html" data-page="about">About Us</a></li>
+                        <li><a href="services.html" data-page="services">Services</a></li>
+                        <li><a href="patient-info.html" data-page="patient-info">Patient Info</a></li>
+                        <li><a href="appointment.html" data-page="appointment">Book Appointment</a></li>
+                        <li><a href="contact.html" data-page="contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Preventive Care</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Restorative Care</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Pediatric Dentistry</a></li>
+                        <li><a href="#">Oral Surgery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:(555)123-4567">(555) 123-4567</a></li>
+                        <li><a href="mailto:info@jawsdentistry.com">info@jawsdentistry.com</a></li>
+                        <li><a href="#">123 Dental Drive, Suite 100<br>Coastal City, CA 90210</a></li>
+                        <li><a href="#">View Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Jaws Family Dentistry. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
