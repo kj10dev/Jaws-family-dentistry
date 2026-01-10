@@ -428,7 +428,8 @@ section {
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
     gap: 30px;
     margin-top: 40px;
 }
@@ -448,8 +449,9 @@ section {
 
 .team-member img {
     width: 100%;
-    height: 250px;
-    object-fit: scale-down;
+    height: 300px;
+    object-fit: cover;
+    object-position: top center;
 }
 
 .team-member-info {
