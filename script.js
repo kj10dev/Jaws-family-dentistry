@@ -1,5 +1,5 @@
 // Initialize GSAP animations and page functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Ensure spinner is removed early so it can't cover the page if other code fails
     const loading = document.getElementById('loading');
     if (loading) {
@@ -88,52 +88,104 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // FAQ toggle: make question headers expand/collapse their answer
         (function initFAQ() {
-          const toggles = document.querySelectorAll('.faq-toggle');
-          if (!toggles.length) return;
+            const toggles = document.querySelectorAll('.faq-toggle');
+            if (!toggles.length) return;
 
-          toggles.forEach(toggle => {
-            // ensure accessible button-like behaviour
-            if (!toggle.hasAttribute('role')) toggle.setAttribute('role', 'button');
-            if (!toggle.hasAttribute('tabindex')) toggle.setAttribute('tabindex', '0');
+            toggles.forEach(toggle => {
+                // ensure accessible button-like behaviour
+                if (!toggle.hasAttribute('role')) toggle.setAttribute('role', 'button');
+                if (!toggle.hasAttribute('tabindex')) toggle.setAttribute('tabindex', '0');
 
-            // find nearest .faq-item and its answer
-            const item = toggle.closest('.faq-item');
-            const answer = item ? item.querySelector('.faq-answer') : null;
+                // find nearest .faq-item and its answer
+                const item = toggle.closest('.faq-item');
+                const answer = item ? item.querySelector('.faq-answer') : null;
 
-            // set initial aria-expanded based on existing .active class
-            const isActive = item && item.classList.contains('active');
-            toggle.setAttribute('aria-expanded', String(Boolean(isActive)));
+                // set initial aria-expanded based on existing .active class
+                const isActive = item && item.classList.contains('active');
+                toggle.setAttribute('aria-expanded', String(Boolean(isActive)));
 
-            // click handler
-            toggle.addEventListener('click', (e) => {
-              if (!item) return;
-              const now = item.classList.toggle('active');
-              toggle.setAttribute('aria-expanded', String(Boolean(now)));
-              // optional: smooth reveal (keeps CSS responsibility for display)
-              if (answer) {
-                if (now) {
-                  answer.style.display = 'block';
-                } else {
-                  answer.style.display = 'none';
-                }
-              }
+                // click handler
+                toggle.addEventListener('click', (e) => {
+                    if (!item) return;
+                    const now = item.classList.toggle('active');
+                    toggle.setAttribute('aria-expanded', String(Boolean(now)));
+                    // optional: smooth reveal (keeps CSS responsibility for display)
+                    if (answer) {
+                        if (now) {
+                            answer.style.display = 'block';
+                        } else {
+                            answer.style.display = 'none';
+                        }
+                    }
+                });
+
+                // keyboard support: Enter and Space activate the toggle
+                toggle.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
+                        e.preventDefault();
+                        toggle.click();
+                    }
+                });
             });
 
-            // keyboard support: Enter and Space activate the toggle
-            toggle.addEventListener('keydown', (e) => {
-              if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') {
-                e.preventDefault();
-                toggle.click();
-              }
+            // Ensure answers' initial state matches .active class (defensive)
+            document.querySelectorAll('.faq-item').forEach(fi => {
+                const ans = fi.querySelector('.faq-answer');
+                if (!ans) return;
+                ans.style.display = fi.classList.contains('active') ? 'block' : 'none';
             });
-          });
+        })();
 
-          // Ensure answers' initial state matches .active class (defensive)
-          document.querySelectorAll('.faq-item').forEach(fi => {
-            const ans = fi.querySelector('.faq-answer');
-            if (!ans) return;
-            ans.style.display = fi.classList.contains('active') ? 'block' : 'none';
-          });
+        // 3D Tilt Logic for Logo
+        (function initTilt() {
+            const tiltContainer = document.querySelector('.tilt-container');
+            if (!tiltContainer) return;
+
+            tiltContainer.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = tiltContainer.getBoundingClientRect();
+                const centerX = left + width / 2;
+                const centerY = top + height / 2;
+
+                // Calculate position relative to center
+                const mouseX = e.clientX - centerX;
+                const mouseY = e.clientY - centerY;
+
+                // Rotation calculation (max 20 degrees)
+                // RotateX is based on Y axis movement (up/down tilts X axis)
+                // RotateY is based on X axis movement (left/right tilts Y axis)
+                // Invert X for natural feel: moving mouse up (negative Y) should look down (negative rotation)? 
+                // Actually usually: mouse up -> top tilts away -> positive rotateX? 
+                // Standard 3D tilt: mouse top -> top goes back.
+                const rotateX = ((mouseY / height) * -20).toFixed(2);
+                const rotateY = ((mouseX / width) * 20).toFixed(2);
+
+                tiltContainer.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            tiltContainer.addEventListener('mouseleave', () => {
+                tiltContainer.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            });
+        })();
+
+        // Slideshow functionality
+        (function initSlideshow() {
+            const slides = document.querySelectorAll('.slide');
+            if (!slides.length) return;
+
+            let currentSlide = 0;
+
+            // Show first slide
+            slides[currentSlide].classList.add('active');
+
+            // Function to show next slide
+            function showNextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+
+            // Auto-advance slides every 5 seconds
+            setInterval(showNextSlide, 5000);
         })();
 
         // other DOM initialization (animations, forms, etc.)...
