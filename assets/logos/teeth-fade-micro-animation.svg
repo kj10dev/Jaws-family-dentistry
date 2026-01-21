@@ -1,0 +1,42 @@
+<svg width="800" height="800" viewBox="0 0 800 800"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .fade {
+      animation: fade 2.8s ease-in-out infinite;
+    }
+
+    .d1 { animation-delay: 0s; }
+    .d2 { animation-delay: 0.4s; }
+    .d3 { animation-delay: 0.8s; }
+    .d4 { animation-delay: 1.2s; }
+
+    @keyframes fade {
+      0%   { opacity: 1; }
+      50%  { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+
+  <!-- SHARK (UNCHANGED – PLACE YOUR ORIGINAL SVG HERE) -->
+  <image href="../assets/Logo.svg" x="0" y="0" width="800" height="800"/>
+
+  <!-- TEETH CONFETTI -->
+  <g fill="#8ed2eaff" stroke="#CFD8DC" stroke-width="2">
+    <path class="fade d1" d="M130 200 C120 170 150 160 160 190 Z"/>
+    <path class="fade d2" d="M220 120 C210 95 240 90 250 115 Z"/>
+    <path class="fade d3" d="M610 140 C600 110 630 105 640 135 Z"/>
+    <path class="fade d4" d="M670 260 C660 235 690 230 700 255 Z"/>
+    <path class="fade d1" d="M140 540 C130 510 160 505 170 530 Z"/>
+    <path class="fade d2" d="M640 560 C630 530 660 525 670 550 Z"/>
+  </g>
+
+  <!-- SPARKLES -->
+  <g fill="#BEEAF4">
+    <circle class="fade d1" cx="420" cy="480" r="6"/>
+    <circle class="fade d2" cx="450" cy="450" r="4"/>
+    <circle class="fade d3" cx="390" cy="460" r="5"/>
+    <circle class="fade d4" cx="410" cy="520" r="4"/>
+  </g>
+
+</svg>
