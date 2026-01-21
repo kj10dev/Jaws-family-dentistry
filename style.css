@@ -1138,8 +1138,17 @@ html {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         padding: 15px;
+        align-items: center;
+    }
+
+    /* Target the nav container to allow wrapping */
+    header nav {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .nav-menu {
@@ -1147,6 +1156,19 @@ html {
         width: 100%;
         margin-top: 20px;
         display: none;
+        order: 3;
+        /* Forcing it to the next line if container wraps */
+        flex-basis: 100%;
+        /* Force full width on wrap */
+
+        /* Mobile Menu Glassmorphism */
+        background: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border: 1px solid var(--glass-border);
+        border-radius: var(--border-radius);
+        padding: 20px;
+        box-shadow: var(--shadow-lg);
     }
 
     .nav-menu.active {
@@ -1154,7 +1176,8 @@ html {
     }
 
     .nav-item {
-        margin: 0;
+        margin: 0 0 10px 0;
+        /* Add bottom margin for spacing */
         width: 100%;
     }
 
