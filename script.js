@@ -188,6 +188,94 @@ document.addEventListener('DOMContentLoaded', function () {
             setInterval(showNextSlide, 5000);
         })();
 
+<<<<<<< HEAD
+=======
+        // Reviews Modal functionality
+        (function initReviewsModal() {
+            const modal = document.getElementById('reviews-modal');
+            const modalClose = document.getElementById('modal-close');
+            const modalContainer = document.getElementById('modal-reviews-container');
+            const readMoreReviewsBtn = document.querySelector('.reviews-cta .btn-primary');
+            const mainReviewsGrid = document.getElementById('reviews-grid-main');
+            const hiddenReviewsContainer = document.getElementById('hidden-reviews-container');
+
+            if (!modal || !readMoreReviewsBtn) return;
+
+            // Get all reviews (both visible and hidden)
+            function getAllReviews() {
+                const reviews = [];
+                
+                // Get reviews from main grid
+                const mainReviewCards = mainReviewsGrid.querySelectorAll('.review-card');
+                mainReviewCards.forEach(card => {
+                    reviews.push(cloneReviewCard(card));
+                });
+
+                // Get reviews from hidden container
+                if (hiddenReviewsContainer) {
+                    const hiddenReviewCards = hiddenReviewsContainer.querySelectorAll('.review-card');
+                    hiddenReviewCards.forEach(card => {
+                        reviews.push(cloneReviewCard(card));
+                    });
+                }
+
+                return reviews;
+            }
+
+            // Clone review card data
+            function cloneReviewCard(card) {
+                return card.cloneNode(true);
+            }
+
+            // Populate modal with reviews
+            function populateModal() {
+                const reviews = getAllReviews();
+                modalContainer.innerHTML = '';
+
+                reviews.forEach(reviewCard => {
+                    modalContainer.appendChild(reviewCard);
+                });
+            }
+
+            // Open modal
+            function openModal() {
+                populateModal();
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; // prevent background scrolling
+            }
+
+            // Close modal
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto'; // restore scrolling
+            }
+
+            // Event listeners
+            readMoreReviewsBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                openModal();
+            });
+
+            if (modalClose) {
+                modalClose.addEventListener('click', closeModal);
+            }
+
+            // Close modal when clicking outside the modal content
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        })();
+
+>>>>>>> 9ec52bd (Re-upload, modal and text corrected)
         // other DOM initialization (animations, forms, etc.)...
         // ...existing code...
 
