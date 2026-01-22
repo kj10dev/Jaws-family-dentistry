@@ -188,8 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
             setInterval(showNextSlide, 5000);
         })();
 
-<<<<<<< HEAD
-=======
         // Reviews Modal functionality
         (function initReviewsModal() {
             const modal = document.getElementById('reviews-modal');
@@ -275,7 +273,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         })();
 
->>>>>>> 9ec52bd (Re-upload, modal and text corrected)
         // other DOM initialization (animations, forms, etc.)...
         // ...existing code...
 

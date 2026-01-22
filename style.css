@@ -394,16 +394,10 @@ section {
 
 .reviews-grid {
     display: grid;
-<<<<<<< HEAD
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-=======
     grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
     gap: 30px;
     margin-top: 40px;
     justify-content: center;
->>>>>>> 9ec52bd (Re-upload, modal and text corrected)
 }
 
 .review-card {
@@ -1372,8 +1366,6 @@ html {
     to {
         transform: rotate(360deg);
     }
-<<<<<<< HEAD
-=======
 }
 
 /* Modal Styles */
@@ -1496,5 +1488,4 @@ html {
     .modal-reviews-grid {
         grid-template-columns: 1fr;
     }
->>>>>>> 9ec52bd (Re-upload, modal and text corrected)
 }
