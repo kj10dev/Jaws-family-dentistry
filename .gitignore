@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+.DS_Store?
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Icon?
+
+# Node.js dependencies and logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build / cache output
+dist/
+build/
+.cache/
+coverage/
+
+# Editor / IDE settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Temp and backup files
+*.swp
+*~
+*.tmp
+*.bak
+*.orig
+
+# Temporary CSS backup (specific to this repo)
+temp_style_backup.css
+
+# Environment / secret files
+.env
+.env.local
+.env.*.local
+
+# Image/source files you might want to keep out of the main branch (uncomment if used)
+# assets/originals/
+# **/raw_images/
+# *.psd
+# *.ai
+
+# Misc
+.sass-cache/
