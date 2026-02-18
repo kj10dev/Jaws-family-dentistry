@@ -826,20 +826,11 @@ section {
     position: relative;
 }
 
-.map-placeholder {
+.map-section iframe {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white);
-    border: 2px dashed var(--gray-medium);
-}
-
-.map-placeholder i {
-    font-size: 3rem;
-    color: var(--gray-dark);
-    margin-bottom: 10px;
+    border: 0;
+    border-radius: var(--border-radius);
 }
 
 .contact-form {
@@ -1391,6 +1382,7 @@ html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -1412,6 +1404,7 @@ html {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
