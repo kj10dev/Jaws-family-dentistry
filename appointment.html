@@ -57,30 +57,34 @@
                 <div class="booking-content">
                     <div class="booking-form">
                         <h3>Schedule Online</h3>
-                        <form id="appointment-form">
+                        <form id="appointment-form" name="appointments" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="appointments">
+                            <p style="display:none">
+                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                            </p>
                             <div class="form-group">
                                 <label for="patient-name" class="form-label">Full Name</label>
-                                <input type="text" id="patient-name" class="form-input" required>
+                                <input type="text" id="patient-name" name="patient-name" class="form-input" required>
                                 <div class="error-message">Please enter your full name</div>
                             </div>
                             <div class="form-group">
                                 <label for="patient-email" class="form-label">Email Address</label>
-                                <input type="email" id="patient-email" class="form-input" required>
+                                <input type="email" id="patient-email" name="patient-email" class="form-input" required>
                                 <div class="error-message">Please enter a valid email address</div>
                             </div>
                             <div class="form-group">
                                 <label for="patient-phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="patient-phone" class="form-input" required>
+                                <input type="tel" id="patient-phone" name="patient-phone" class="form-input" required>
                                 <div class="error-message">Please enter a valid phone number</div>
                             </div>
                             <div class="form-group">
                                 <label for="appointment-date" class="form-label">Preferred Date</label>
-                                <input type="date" id="appointment-date" class="form-input" required>
+                                <input type="date" id="appointment-date" name="appointment-date" class="form-input" required>
                                 <div class="error-message">Please select a date</div>
                             </div>
                             <div class="form-group">
                                 <label for="appointment-time" class="form-label">Preferred Time</label>
-                                <select id="appointment-time" class="form-select" required>
+                                <select id="appointment-time" name="appointment-time" class="form-select" required>
                                     <option value="">Select a time</option>
                                     <option value="8:00 AM">8:00 AM</option>
                                     <option value="9:00 AM">9:00 AM</option>
@@ -97,7 +101,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="service-type" class="form-label">Service Type</label>
-                                <select id="service-type" class="form-select" required>
+                                <select id="service-type" name="service-type" class="form-select" required>
                                     <option value="">Select a service</option>
                                     <option value="checkup">Routine Check-up & Cleaning</option>
                                     <option value="filling">Tooth Filling</option>
@@ -111,7 +115,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="message" class="form-label">Additional Information</label>
-                                <textarea id="message" class="form-textarea"
+                                <textarea id="message" name="message" class="form-textarea"
                                     placeholder="Please let us know if you have any special requests or concerns..."></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Submit Appointment Request</button>
@@ -142,7 +146,7 @@
                             <div class="contact-text">
                                 <h4>Business Hours</h4>
                                 <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
-                                <p>Friday: 9:00 AM - 5:00 PM</p>
+                                <p>Friday: 9:00 AM - 4:00 PM</p>
                                 <p>Saturday: 9:00 AM - 2:00 PM</p>
                                 <p>Sunday: Closed</p>
                             </div>
@@ -203,7 +207,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 Jaws Family Dentistry. All rights reserved.
+                &copy; 2025 Jaws Family Dentistry. All rights reserved. ❤️ 🦷. Designed by <a href="https://kode-jo.com" target="_blank" rel="noopener" style="text-decoration:none;color:inherit;">Kode-Jo</a>.
             </div>
         </div>
     </footer>
