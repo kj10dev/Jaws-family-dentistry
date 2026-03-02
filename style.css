@@ -629,6 +629,27 @@ section {
     color: var(--secondary-color);
 }
 
+/* Ensure text inside .insurance-info wraps and flex children can shrink on small screens */
+.insurance-info,
+.insurance-info p,
+.insurance-info h3,
+.insurance-info h4,
+.insurance-info ul,
+.insurance-info li {
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+    white-space: normal;
+    max-width: 100%;
+}
+
+/* Allow flex children to shrink below their content width when necessary; override inline min-width */
+.insurance-info > div > div {
+    min-width: 0 !important;
+    flex-basis: 0;
+}
+
 /* Patient Information Section */
 .patient-info-content {
     display: flex;
