@@ -7,6 +7,7 @@
     <title>Appointment - Jaws Family Dentistry</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="assets/Logo.svg">
     <script src="script.js" defer></script>
 </head>
 
@@ -56,30 +57,34 @@
                 <div class="booking-content">
                     <div class="booking-form">
                         <h3>Schedule Online</h3>
-                        <form id="appointment-form">
+                        <form id="appointment-form" name="appointments" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+                            <input type="hidden" name="form-name" value="appointments">
+                            <p style="display:none">
+                                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                            </p>
                             <div class="form-group">
                                 <label for="patient-name" class="form-label">Full Name</label>
-                                <input type="text" id="patient-name" class="form-input" required>
+                                <input type="text" id="patient-name" name="patient-name" class="form-input" required>
                                 <div class="error-message">Please enter your full name</div>
                             </div>
                             <div class="form-group">
                                 <label for="patient-email" class="form-label">Email Address</label>
-                                <input type="email" id="patient-email" class="form-input" required>
+                                <input type="email" id="patient-email" name="patient-email" class="form-input" required>
                                 <div class="error-message">Please enter a valid email address</div>
                             </div>
                             <div class="form-group">
                                 <label for="patient-phone" class="form-label">Phone Number</label>
-                                <input type="tel" id="patient-phone" class="form-input" required>
+                                <input type="tel" id="patient-phone" name="patient-phone" class="form-input" required>
                                 <div class="error-message">Please enter a valid phone number</div>
                             </div>
                             <div class="form-group">
                                 <label for="appointment-date" class="form-label">Preferred Date</label>
-                                <input type="date" id="appointment-date" class="form-input" required>
+                                <input type="date" id="appointment-date" name="appointment-date" class="form-input" required>
                                 <div class="error-message">Please select a date</div>
                             </div>
                             <div class="form-group">
                                 <label for="appointment-time" class="form-label">Preferred Time</label>
-                                <select id="appointment-time" class="form-select" required>
+                                <select id="appointment-time" name="appointment-time" class="form-select" required>
                                     <option value="">Select a time</option>
                                     <option value="8:00 AM">8:00 AM</option>
                                     <option value="9:00 AM">9:00 AM</option>
@@ -96,7 +101,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="service-type" class="form-label">Service Type</label>
-                                <select id="service-type" class="form-select" required>
+                                <select id="service-type" name="service-type" class="form-select" required>
                                     <option value="">Select a service</option>
                                     <option value="checkup">Routine Check-up & Cleaning</option>
                                     <option value="filling">Tooth Filling</option>
@@ -110,7 +115,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="message" class="form-label">Additional Information</label>
-                                <textarea id="message" class="form-textarea"
+                                <textarea id="message" name="message" class="form-textarea"
                                     placeholder="Please let us know if you have any special requests or concerns..."></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Submit Appointment Request</button>
@@ -123,7 +128,7 @@
                             <div class="contact-icon">📞</div>
                             <div class="contact-text">
                                 <h4>Phone</h4>
-                                <p>(555) 123-4567</p>
+                                <p>061-526-5146</p>
                                 <p>Call us during business hours to speak with a member of our team.</p>
                             </div>
                         </div>
@@ -131,7 +136,7 @@
                             <div class="contact-icon">📧</div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p>appointments@jawsdentistry.com</p>
+                                <p>appointments@jawsdentistry.co.za</p>
                                 <p>Send us an email with your preferred dates and times, and we'll get back to you
                                     within 24 hours.</p>
                             </div>
@@ -140,9 +145,9 @@
                             <div class="contact-icon">⏰</div>
                             <div class="contact-text">
                                 <h4>Business Hours</h4>
-                                <p>Monday - Thursday: 8:00 AM - 6:00 PM</p>
-                                <p>Friday: 8:00 AM - 5:00 PM</p>
-                                <p>Saturday: 9:00 AM - 3:00 PM</p>
+                                <p>Monday - Thursday: 9:00 AM - 5:00 PM</p>
+                                <p>Friday: 9:00 AM - 4:00 PM</p>
+                                <p>Saturday: 9:00 AM - 2:00 PM</p>
                                 <p>Sunday: Closed</p>
                             </div>
                         </div>
@@ -150,8 +155,8 @@
                             <div class="contact-icon">📍</div>
                             <div class="contact-text">
                                 <h4>Location</h4>
-                                <p>22 Chamberlain Road, Berea<br>East London, EC 5241</p>
-                                <p>Conveniently located near downtown with ample parking available.</p>
+                                <p>20 Greenwood Str, Berea<br>East London, 5241</p>
+                                <p>Located in the near Engine Garage, opposite Kenwill Court.</p>
                             </div>
                         </div>
                     </div>
@@ -169,9 +174,15 @@
                     <p>Your trusted partner for comprehensive dental care for the whole family. We provide gentle,
                         expert care in a comfortable, modern environment.</p>
                     <div class="social-icons">
-                        <a href="#" class="social-icon" aria-label="Facebook">f</a>
-                        <a href="#" class="social-icon" aria-label="Instagram">i</a>
-                        <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                        <a href="https://www.facebook.com/profile.php?id=61588363524865" class="social-icon" aria-label="Facebook">
+                            <img src="./assets/logos/socials/facebook 1.svg" alt="Facebook Icon" class="social-icon-img">
+                        </a>
+                        <a href="https://www.instagram.com/jawsfamilydentistry/" class="social-icon" aria-label="Instagram">
+                            <img src="./assets/logos/socials/instagram 1.svg" alt="Instagram Icon" class="social-icon-img">
+                        </a>
+                        <a href="https://www.tiktok.com/@jawsfamilydentistry" class="social-icon" aria-label="Tiktok">
+                            <img src="./assets/logos/socials/tiktok 1.svg" alt="Tiktok Icon" class="social-icon-img">
+                        </a>
                     </div>
                 </div>
                 <div class="footer-section">
@@ -188,15 +199,15 @@
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><a href="tel:(555)123-4567">(555) 123-4567</a></li>
-                        <li><a href="mailto:info@jawsdentistry.com">info@jawsdentistry.com</a></li>
-                        <li><a href="#">22 Chamberlain Road, Berea<br>East London, EC 5241</a></li>
-                        <li><a href="#">View Map</a></li>
+                        <li><a href="tel:+27615265146">061-526-5146</a></li>
+                        <li><a href="mailto:info@jawsdentistry.co.za">info@jawsdentistry.co.za</a></li>
+                        <li><a href="https://maps.app.goo.gl/8MngPqWAJXi6FKr29">20 Greenwood Str, Berea<br>East London, 5241</a></li>
+                        <li><a href="https://maps.app.goo.gl/8MngPqWAJXi6FKr29">View Map</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 Jaws Family Dentistry. All rights reserved.
+                &copy; 2025 Jaws Family Dentistry. All rights reserved. 🦈 🦷. Designed by <a href="https://kode-jo.com" target="_blank" rel="noopener" style="color:orange;">Kode-Jo</a>.
             </div>
         </div>
     </footer>
