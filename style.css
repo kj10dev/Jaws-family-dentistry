@@ -1503,3 +1503,26 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
+.whatsapp{
+    position:fixed;
+    bottom : 50px;
+    right: 50px;
+}
+
+.social-icon-wa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 15%;
+    border-radius: 30%;
+    color: var(--accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-icon-wa:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-10px);
+}
